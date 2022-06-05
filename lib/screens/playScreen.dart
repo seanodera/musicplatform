@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:musicplatform/podo/Models.dart';
 
-import '../podo/songsModels.dart';
-
-class Player extends StatefulWidget {
-  const Player({Key? key}) : super(key: key);
+class PlayScreen extends StatefulWidget {
+  const PlayScreen({Key? key}) : super(key: key);
 
   @override
-  State<Player> createState() => _PlayerState();
+  State<PlayScreen> createState() => _PlayScreenState();
 }
 
-class _PlayerState extends State<Player> {
+class _PlayScreenState extends State<PlayScreen> {
   bool fav = false, shuffle = false, repeat = false;
   late Song currentSong;
   Duration currentDuration = const Duration(seconds: 0);
@@ -35,7 +33,8 @@ class _PlayerState extends State<Player> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               IconButton(
-                  onPressed: () {}, icon: const Icon(Icons.keyboard_arrow_down)),
+                  onPressed: () {},
+                  icon: const Icon(Icons.keyboard_arrow_down)),
               IconButton(onPressed: () {}, icon: const Icon(Icons.more_horiz)),
             ],
           ),
@@ -87,15 +86,21 @@ class _PlayerState extends State<Player> {
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              IconButton(onPressed: () {}, icon: Icon((shuffle)? Icons.shuffle_on : Icons.shuffle_outlined)),
               IconButton(
-                  onPressed: () {}, icon: const Icon(Icons.skip_previous_outlined)),
+                  onPressed: () {},
+                  icon: Icon(
+                      (shuffle) ? Icons.shuffle_on : Icons.shuffle_outlined)),
+              IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.skip_previous_outlined)),
               IconButton(
                   onPressed: () {},
                   icon: const Icon(Icons.play_circle_fill_outlined)),
               IconButton(
                   onPressed: () {}, icon: const Icon(Icons.skip_next_outlined)),
-              IconButton(onPressed: () {}, icon: Icon((repeat)? Icons.repeat_on : Icons.repeat)),
+              IconButton(
+                  onPressed: () {},
+                  icon: Icon((repeat) ? Icons.repeat_on : Icons.repeat)),
             ],
           )
         ],
