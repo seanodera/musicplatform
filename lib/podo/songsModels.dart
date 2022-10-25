@@ -1,3 +1,7 @@
+// ignore_for_file: file_names
+
+import 'package:flutter/material.dart';
+
 class Song {
   late int id, artistId, albumId;
   late Duration duration;
@@ -62,9 +66,20 @@ class Album {
         ? DateTime.now()
         : DateTime.parse(json['release_date']);
     var recordType = json['record_type'];
-    print(recordType);
+
     single = false;
     ep = false;
     songs = _songs;
+  }
+}
+
+class Genre {
+  late Color color;
+  late String image, name;
+  late int id;
+  Genre.fromMap(Map<String, dynamic> data, this.color) {
+    image = data['picture_big'];
+    name = data['name'];
+    id = data['id'];
   }
 }

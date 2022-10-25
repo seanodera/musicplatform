@@ -29,72 +29,69 @@ class _MainShellState extends State<MainShell> {
     ProviderModel providerModel = Provider.of<ProviderModel>(context);
     TextStyle style = const TextStyle(color: Colors.white);
     return Scaffold(
-      body: Scaffold(
-        body: Padding(
-          padding: const EdgeInsets.all(10),
-          child: [
-            const HomeScreen(),
-            const SearchScreen(),
-            const Library(),
-          ].elementAt(index),
+      body: Padding(
+        padding: const EdgeInsets.all(10),
+        child: [
+          const HomeScreen(),
+          const SearchScreen(),
+          const Library(),
+        ].elementAt(index),
+      ),
+      bottomNavigationBar: Container(
+        padding: const EdgeInsets.only(top: 4),
+        color: Theme.of(context).colorScheme.background,
+        child: BubbleBottomBar(
+          currentIndex: index,
+          backgroundColor: Theme.of(context).colorScheme.background,
+          onTap: (_index) {
+            setState(() {
+              index = (_index != null) ? _index : 0;
+            });
+          },
+          items: [
+            BubbleBottomBarItem(
+                backgroundColor: Theme.of(context).colorScheme.secondary,
+                icon: const Icon(Icons.home_outlined),
+                activeIcon: const Icon(
+                  Icons.home_outlined,
+                  color: Colors.white,
+                  size: 25,
+                ),
+                title: Text(
+                  'Home',
+                  style: style,
+                )),
+            BubbleBottomBarItem(
+                backgroundColor: Theme.of(context).colorScheme.secondary,
+                icon: const Icon(Icons.search),
+                activeIcon: const Icon(
+                  Icons.search,
+                  color: Colors.white,
+                ),
+                title: Text(
+                  'search',
+                  style: style,
+                )),
+            BubbleBottomBarItem(
+                backgroundColor: Theme.of(context).colorScheme.secondary,
+                icon: const Icon(Icons.my_library_music_outlined),
+                activeIcon: const Icon(
+                  Icons.my_library_music_outlined,
+                  color: Colors.white,
+                ),
+                title: Text(
+                  'library',
+                  style: style,
+                )),
+          ],
+          opacity: 1,
+          iconSize: 25,
         ),
-        bottomNavigationBar: (providerModel.currentSong.id != 0)
-            ? Consumer<ProviderModel>(
-                builder: (a, b, c) => MiniPlayer(
-                      providerModel: b,
-                    ))
-            : Container(
-                height: 1,
-                width: 1,
-              ),
       ),
-      bottomNavigationBar: BubbleBottomBar(
-        currentIndex: index,
-        backgroundColor: const Color.fromARGB(255, 38, 38, 38),
-        onTap: (_index) {
-          setState(() {
-            index = (_index != null) ? _index : 0;
-          });
-        },
-        items: [
-          BubbleBottomBarItem(
-              backgroundColor: Theme.of(context).colorScheme.secondary,
-              icon: const Icon(Icons.home_outlined),
-              activeIcon: const Icon(
-                Icons.home_outlined,
-                color: Colors.white,
-                size: 25,
-              ),
-              title: Text(
-                'Home',
-                style: style,
-              )),
-          BubbleBottomBarItem(
-              backgroundColor: Theme.of(context).colorScheme.secondary,
-              icon: const Icon(Icons.search),
-              activeIcon: const Icon(
-                Icons.search,
-                color: Colors.white,
-              ),
-              title: Text(
-                'search',
-                style: style,
-              )),
-          BubbleBottomBarItem(
-              backgroundColor: Theme.of(context).colorScheme.secondary,
-              icon: const Icon(Icons.my_library_music_outlined),
-              activeIcon: const Icon(
-                Icons.my_library_music_outlined,
-                color: Colors.white,
-              ),
-              title: Text(
-                'library',
-                style: style,
-              )),
-        ],
-        opacity: 1,
-        iconSize: 25,
-      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: Consumer<ProviderModel>(
+          builder: (context, providerModel, widget) =>
+              MiniPlayer(providerModel: providerModel)),
     );
   }
 }

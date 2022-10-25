@@ -1,21 +1,26 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
-import 'package:musicplatform/generated/i18n.dart';
 import 'package:musicplatform/podo/RouterManager.dart';
+import 'package:musicplatform/podo/providerModel.dart';
+import 'package:provider/provider.dart';
 
 class SplashPage extends StatefulWidget {
   static const String image = 'ic_splash.png';
-
-  const SplashPage({Key? key}) : super(key: key);
+  const SplashPage({
+    Key? key,
+  }) : super(key: key);
 
   @override
   _SplashPageState createState() => _SplashPageState();
 }
 
-class _SplashPageState extends State<SplashPage> with TickerProviderStateMixin {
+class _SplashPageState extends State<SplashPage>
+    with TickerProviderStateMixin, WidgetsBindingObserver {
   late AnimationController _countdownController;
 
   @override
   void initState() {
+    WidgetsBinding.instance!.addObserver(this);
     _countdownController =
         AnimationController(vsync: this, duration: const Duration(seconds: 2));
     _countdownController.forward();
@@ -25,7 +30,19 @@ class _SplashPageState extends State<SplashPage> with TickerProviderStateMixin {
   @override
   void dispose() {
     _countdownController.dispose();
+    WidgetsBinding.instance!.removeObserver(this);
     super.dispose();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    super.didChangeAppLifecycleState(state);
+    if (state == AppLifecycleState.inactive ||
+        state == AppLifecycleState.detached) {
+      ProviderModel providerModel = Provider.of<ProviderModel>(context);
+      providerModel.player.dispose();
+      providerModel.dispose();
+    }
   }
 
   @override

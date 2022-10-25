@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'StorageManager.dart';
@@ -18,14 +20,38 @@ class ThemeModel extends ChangeNotifier {
     var themeColor = Colors.red;
     var accentColor = Colors.redAccent.shade400;
     var scaffoldBackgroundColor =
-        isDark ? const Color(0xFF373331) : Colors.white;
+        isDark ? const Color(0xFF262626) : Colors.white;
+    ColorScheme colorScheme = ColorScheme(
+        brightness: brightness,
+        primary: Colors.white,
+        onPrimary: Colors.black,
+        secondary: Colors.redAccent.shade400,
+        onSecondary: Colors.white,
+        error: Colors.amberAccent.shade400,
+        onError: Colors.black,
+        background: const Color(0xFFcca3a3),
+        onBackground: Colors.white,
+        surface: const Color(0xFF808080),
+        onSurface: Colors.white);
+    ColorScheme darkColorScheme = ColorScheme(
+        brightness: brightness,
+        primary: Colors.black,
+        onPrimary: Colors.white,
+        secondary: Colors.redAccent.shade400,
+        onSecondary: Colors.black,
+        error: Colors.amberAccent.shade400,
+        onError: Colors.black,
+        background: const Color(0xFF403333),
+        onBackground: Colors.white,
+        surface: const Color(0xFF808080),
+        onSurface: Colors.white);
     var themeData = ThemeData(
         brightness: brightness,
         scaffoldBackgroundColor: scaffoldBackgroundColor,
+        backgroundColor: scaffoldBackgroundColor,
         fontFamily: 'system',
         primaryColor: Colors.white,
-        colorScheme: ColorScheme.fromSwatch(primarySwatch: themeColor)
-            .copyWith(secondary: accentColor, brightness: brightness));
+        colorScheme: (isDark) ? darkColorScheme : colorScheme);
 
     themeData = themeData.copyWith(
       brightness: brightness,
@@ -51,7 +77,11 @@ class ThemeModel extends ChangeNotifier {
       ),
 //          textTheme: CupertinoTextThemeData(brightness: Brightness.light)
       inputDecorationTheme: ThemeHelper.inputDecorationTheme(themeData),
-      colorScheme: ColorScheme.fromSwatch().copyWith(secondary: accentColor),
+      iconTheme: IconThemeData(
+        color: colorScheme.primary,
+        size: 24,
+      ),
+      colorScheme: (isDark) ? darkColorScheme : colorScheme,
     );
     return themeData;
   }
@@ -67,14 +97,16 @@ class ThemeModel extends ChangeNotifier {
 
 class ThemeHelper {
   static InputDecorationTheme inputDecorationTheme(ThemeData theme) {
-    var primaryColor = theme.primaryColor;
-    var dividerColor = theme.dividerColor;
-    var errorColor = theme.errorColor;
-    var disabledColor = theme.disabledColor;
-
+    var primaryColor = theme.colorScheme.onPrimary;
+    var dividerColor = const Color(0xFF707070);
+    var errorColor = Colors.amberAccent.shade400;
+    var disabledColor = Colors.grey;
+    var accentColor = theme.colorScheme.secondary;
     var width = 0.5;
 
     return InputDecorationTheme(
+      focusColor: accentColor,
+      iconColor: accentColor,
       hintStyle: const TextStyle(fontSize: 14),
       errorBorder: UnderlineInputBorder(
           borderSide: BorderSide(width: width, color: errorColor)),

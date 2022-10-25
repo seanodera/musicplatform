@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
 class Settings extends StatefulWidget {
@@ -10,11 +12,8 @@ class Settings extends StatefulWidget {
 class _SettingsState extends State<Settings> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-
-    );
+    return Container();
   }
 }
 
-class Preferences {
-}
+class Preferences {}

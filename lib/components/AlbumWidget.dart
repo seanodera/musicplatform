@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:musicplatform/podo/Models.dart';
 import 'package:musicplatform/screens/AlbumView.dart';

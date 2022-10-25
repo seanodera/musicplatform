@@ -5,8 +5,10 @@ import 'package:flutter/material.dart';
 
 class HomeTitle extends StatelessWidget {
   final String title;
-  final void Function() onTap;
-  const HomeTitle({Key? key, required this.title, required this.onTap})
+  final void Function()? onTap;
+  final bool showRight;
+  const HomeTitle(
+      {Key? key, required this.title, this.onTap, this.showRight = false})
       : super(key: key);
 
   @override
@@ -21,15 +23,17 @@ class HomeTitle extends StatelessWidget {
                   fontSize: 22.0,
                   fontWeight: FontWeight.bold,
                   letterSpacing: 1.2)),
-          GestureDetector(
-            onTap: onTap,
-            child: const Text('View All',
-                style: TextStyle(
-                  color: Colors.grey,
-                  fontSize: 12.0,
-                  fontWeight: FontWeight.w600,
-                )),
-          ),
+          (showRight)
+              ? GestureDetector(
+                  onTap: onTap,
+                  child: const Text('View All',
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 12.0,
+                        fontWeight: FontWeight.w600,
+                      )),
+                )
+              : Container(),
         ],
       ),
     );

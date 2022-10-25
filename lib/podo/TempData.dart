@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:flutter/material.dart';
 import 'Models.dart';
 import 'package:http/http.dart' as http;
 
@@ -17,13 +18,11 @@ class Database {
     http.StreamedResponse response = await request.send();
 
     if (response.statusCode == 200) {
-      List data =
-          jsonDecode(await response.stream.bytesToString())['tracks']['data'];
+      var _data = await response.stream.bytesToString();
+      List data = jsonDecode(_data)['tracks']['data'];
       for (var element in data) {
         songs.add(Song.fromMap(element));
       }
-    } else {
-      print(response.reasonPhrase);
     }
 
     return songs;
@@ -112,9 +111,36 @@ class Database {
     return playlists;
   }
 
+  Future<Song> getSong(int id) async {
+    var res = await http.get(Uri.parse(baseUrl + '/track/' + id.toString()));
+
+    return Song.fromMap(jsonDecode(res.body));
+  }
+
+  Future<List<Genre>> getGenres() async {
+    List<Genre> list = [];
+    var res = await http.get(Uri.parse(baseUrl + '/genre'));
+    debugPrint(res.body.toString());
+    List data = jsonDecode(res.body)['data'];
+    for (var element in data) {
+      var pal = await getColorFromImage(NetworkImage(element["picture_big"]));
+      Color color = (pal.dominantColor != null)
+          ? pal.dominantColor!.color
+          : Colors.redAccent.shade400;
+      debugPrint('got here');
+      list.add(Genre.fromMap(element, color));
+    }
+    return list;
+  }
+
   Future<Map<String, dynamic>> searchTop(String searchTerm) async {
     var res = await http.get(Uri.parse(baseUrl + 'search?q' + searchTerm));
     Map<String, dynamic> data = jsonDecode(res.body);
     return data;
+  }
+
+  Future<List<Song>> getRecomended() async {
+    List<Song> songs = [];
+    return songs;
   }
 }

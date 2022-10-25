@@ -100,10 +100,11 @@ class _HomeScreenState extends State<HomeScreen> {
     HomeModel homeModel = Provider.of<HomeModel>(context);
     Size size = MediaQuery.of(context).size;
     List<Playlist> featured = homeModel.topPlaylist;
-    List<Song> songs = providerModel.queue;
     List<Album> topAlbums = homeModel.albums;
-    List<RecentlyPlayed> recent = List.generate(providerModel.queue.length,
-        (index) => RecentlyPlayed(type: 'song', object: songs[index]));
+    List<RecentlyPlayed> recent = List.generate(
+        providerModel.recentlyPlayed.length,
+        (index) => RecentlyPlayed(
+            type: 'song', object: providerModel.recentlyPlayed[index]));
 
     return ListView(
       shrinkWrap: true,

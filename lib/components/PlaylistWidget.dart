@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:musicplatform/podo/Models.dart';
 import 'package:musicplatform/screens/PlayListView.dart';
@@ -18,7 +20,7 @@ class PlaylistWidget extends StatelessWidget {
         child: Column(
           children: [
             Image.network(
-              (playList.picture != null) ? playList.pictureBig : art,
+              (playList.picture != '') ? playList.pictureBig : art,
               width: (size.width / 2.5) - 40,
               height: (size.width / 2.5) - 40,
               fit: BoxFit.contain,
