@@ -1,0 +1,354 @@
+repo_name: seanodera/musicplatform
+report_id: acae11c1756947995ea5a0a85b1ed322
+version: 0.1
+repo_type: Public
+timestamp: '2024-07-07T22:08:31+00:00'
+requested_by: seanodera
+provider: github
+branch: master
+detected_tools_count: 26
+tools:
+- name: Dart
+  description: A new web programming language with libraries, a virtual machine, and
+    tools
+  website_url: https://www.dartlang.org/
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1646/Twitter-02.png
+  detection_source_url: https://github.com/seanodera/musicplatform
+  detection_source: Repo Metadata
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/seanodera/musicplatform/blob/master/pubspec.yaml
+  detection_source: pubspec.yaml
+  last_updated_by: Sean Odera
+  last_updated_on: 2022-05-22 20:24:32.000000000 Z
+- name: Kotlin
+  description: Statically typed Programming Language targeting JVM and JavaScript
+  website_url: https://kotlinlang.org/
+  open_source: true
+  hosted_saas: true
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/3750/pCfEzr6L.png
+  detection_source_url: https://github.com/seanodera/musicplatform
+  detection_source: Repo Metadata
+- name: Objective-C
+  description: The primary programming language you use when writing software for
+    OS X and iOS
+  website_url: https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1008/xcode.png
+  detection_source_url: https://github.com/seanodera/musicplatform
+  detection_source: Repo Metadata
+- name: Ruby
+  description: A dynamic, interpreted, open source programming language with a focus
+    on simplicity and productivity
+  website_url: https://www.ruby-lang.org
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/989/ruby.png
+  detection_source_url: https://github.com/seanodera/musicplatform
+  detection_source: Repo Metadata
+- name: Swift
+  description: An innovative new programming language for Cocoa and Cocoa Touch.
+  website_url: https://developer.apple.com/swift/
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1009/tuHsaI2U.png
+  detection_source_url: https://github.com/seanodera/musicplatform
+  detection_source: Repo Metadata
+- name: Android SDK
+  description: An SDK that provides you the API libraries and developer tools necessary
+    to build, test, and debug apps for Android.
+  website_url: http://developer.android.com
+  open_source: false
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Frameworks (Full Stack)
+  image_url: https://img.stackshare.io/service/1010/m8jf0po4imu8t5eemjdd.png
+  detection_source_url: https://github.com/seanodera/musicplatform/blob/master/android/app/build.gradle
+  detection_source: android/app/build.gradle
+  last_updated_by: Sean Odera
+  last_updated_on: 2022-05-22 20:24:32.000000000 Z
+- name: Flutter
+  description: Cross-platform mobile framework from Google
+  website_url: https://flutter.io/
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Cross-Platform Mobile Development
+  image_url: https://img.stackshare.io/service/7180/flutter-mark-square-100.png
+  detection_source_url: https://github.com/seanodera/musicplatform/blob/master/pubspec.yaml
+  detection_source: pubspec.yaml
+  last_updated_by: Sean Odera
+  last_updated_on: 2022-05-22 20:24:32.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/seanodera/musicplatform
+  detection_source: Repo Metadata
+- name: Gradle
+  description: A powerful build system for the JVM
+  website_url: https://www.gradle.org/
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Java Build Tools
+  image_url: https://img.stackshare.io/service/975/gradlephant-social-black-bg.png
+  detection_source_url: https://github.com/seanodera/musicplatform/blob/master/android/app/build.gradle
+  detection_source: android/app/build.gradle
+  last_updated_by: Sean Odera
+  last_updated_on: 2022-05-22 20:24:32.000000000 Z
+- name: npm
+  description: The package manager for JavaScript.
+  website_url: https://www.npmjs.com/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/seanodera/musicplatform/blob/master/pubspec.yaml
+  detection_source: pubspec.yaml
+  last_updated_by: Sean Odera
+  last_updated_on: 2022-05-22 20:24:32.000000000 Z
+- name: Android OS
+  description: An open source mobile operating system by Google
+  website_url: https://www.android.com
+  open_source: false
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Operating Systems
+  image_url: https://img.stackshare.io/service/9586/ZvmtaSXW_400x400.jpg
+  detection_source_url: https://github.com/seanodera/musicplatform/blob/master/android/app/build.gradle
+  detection_source: android/app/build.gradle
+  last_updated_by: Sean Odera
+  last_updated_on: 2022-05-22 20:24:32.000000000 Z
+- name: CocoaPods
+  description: A dependency manager for Swift and Objective-C Cocoa projects
+  website_url: https://cocoapods.org/
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: CocoaPods Packages
+  image_url: https://img.stackshare.io/service/2426/e1cbdef9d4b11484049a033886578e54_400x400.png
+  detection_source_url: https://github.com/seanodera/musicplatform/blob/master/ios/Podfile.lock
+  detection_source: ios/Podfile.lock
+  last_updated_by: Sean Odera
+  last_updated_on: 2022-06-05 05:43:09.000000000 Z
+- name: dio
+  description: |-
+    A powerful HTTP networking package,
+    supports Interceptors,
+    Aborting and canceling a request,
+    Custom adapters
+  package_url: https://pub.dartlang.org/dio
+  version: 4.0.6
+  license: MIT
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Package Managers
+  image_url: https://img.stackshare.io/package/pub/image.png
+  detection_source_url: https://github.com/seanodera/musicplatform/blob/master/pubspec.lock
+  detection_source: pubspec.yaml
+  last_updated_by: Sean Odera
+  last_updated_on: 2022-05-22 20:24:32.000000000 Z
+  vulnerabilities:
+  - name: dio vulnerable to CRLF injection with HTTP method string
+    cve_id: CVE-2021-31402
+    cve_url: https://github.com/advisories/GHSA-9324-jv53-9cc8
+    detected_date: Nov 9
+    severity: high
+    first_patched: 5.0.0
+  - name: 'Duplicate Advisory: Improper Neutralization of CRLF Sequences in dio'
+    cve_id:
+    cve_url: https://github.com/advisories/GHSA-jwpw-q68h-r678
+    detected_date: Nov 9
+    severity: high
+    first_patched: 5.0.0
+- name: bubble_bottom_bar
+  description: BubbleBottomBar is a Flutter widget designed by cubertodesign and developed
+    by westdabestdb
+  package_url: https://pub.dartlang.org/bubble_bottom_bar
+  version: 2.0.0
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Package Managers
+  image_url: https://img.stackshare.io/package/pub/image.png
+  detection_source_url: https://github.com/seanodera/musicplatform/blob/master/pubspec.lock
+  detection_source: pubspec.yaml
+  last_updated_by: Sean Odera
+  last_updated_on: 2022-06-05 05:43:09.000000000 Z
+- name: cached_network_image
+  description: Flutter library to load and cache network images
+  package_url: https://pub.dartlang.org/cached_network_image
+  version: 3.2.0
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Package Managers
+  image_url: https://img.stackshare.io/package/pub/image.png
+  detection_source_url: https://github.com/seanodera/musicplatform/blob/master/pubspec.lock
+  detection_source: pubspec.yaml
+  last_updated_by: Sean Odera
+  last_updated_on: 2022-06-05 05:43:09.000000000 Z
+- name: cupertino_icons
+  description: Default icons asset for Cupertino widgets based on Apple styled icons
+  package_url: https://pub.dartlang.org/cupertino_icons
+  version: 1.0.4
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Package Managers
+  image_url: https://img.stackshare.io/package/pub/image.png
+  detection_source_url: https://github.com/seanodera/musicplatform/blob/master/pubspec.lock
+  detection_source: pubspec.yaml
+  last_updated_by: Sean Odera
+  last_updated_on: 2022-05-22 20:24:32.000000000 Z
+- name: flutter
+  description: Visit flutter.io to get started
+  package_url: https://pub.dartlang.org/flutter
+  version: 0.0.0
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Package Managers
+  image_url: https://img.stackshare.io/package/pub/image.png
+  detection_source_url: https://github.com/seanodera/musicplatform/blob/master/pubspec.lock
+  detection_source: pubspec.yaml
+  last_updated_by: Sean Odera
+  last_updated_on: 2022-05-22 20:24:32.000000000 Z
+- name: http
+  description: A composable
+  package_url: https://pub.dartlang.org/http
+  version: 0.13.4
+  license: BSD-3-Clause
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Package Managers
+  image_url: https://img.stackshare.io/package/pub/image.png
+  detection_source_url: https://github.com/seanodera/musicplatform/blob/master/pubspec.lock
+  detection_source: pubspec.yaml
+  last_updated_by: Sean Odera
+  last_updated_on: 2022-06-05 05:43:09.000000000 Z
+- name: localstorage
+  description: Simple json file-based storage for flutter
+  package_url: https://pub.dartlang.org/localstorage
+  version: 4.0.0
+  license: MIT
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Package Managers
+  image_url: https://img.stackshare.io/package/pub/image.png
+  detection_source_url: https://github.com/seanodera/musicplatform/blob/master/pubspec.lock
+  detection_source: pubspec.yaml
+  last_updated_by: Sean Odera
+  last_updated_on: 2022-06-05 05:43:09.000000000 Z
+- name: oktoast
+  description: A pure flutter toast library
+  package_url: https://pub.dartlang.org/oktoast
+  version: 2.3.2
+  license: Apache-2.0
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Package Managers
+  image_url: https://img.stackshare.io/package/pub/image.png
+  detection_source_url: https://github.com/seanodera/musicplatform/blob/master/pubspec.lock
+  detection_source: pubspec.yaml
+  last_updated_by: Sean Odera
+  last_updated_on: 2022-06-05 05:43:09.000000000 Z
+- name: palette_generator
+  description: Flutter package for generating palette colors from a source image
+  package_url: https://pub.dartlang.org/palette_generator
+  version: 0.3.3
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Package Managers
+  image_url: https://img.stackshare.io/package/pub/image.png
+  detection_source_url: https://github.com/seanodera/musicplatform/blob/master/pubspec.lock
+  detection_source: pubspec.yaml
+  last_updated_by: Sean Odera
+  last_updated_on: 2022-05-24 18:41:44.000000000 Z
+- name: provider
+  description: A wrapper around InheritedWidget to make them easier to use and more
+    reusable
+  package_url: https://pub.dartlang.org/provider
+  version: 6.0.3
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Package Managers
+  image_url: https://img.stackshare.io/package/pub/image.png
+  detection_source_url: https://github.com/seanodera/musicplatform/blob/master/pubspec.lock
+  detection_source: pubspec.yaml
+  last_updated_by: Sean Odera
+  last_updated_on: 2022-05-24 18:41:44.000000000 Z
+- name: shared_preferences
+  description: Flutter plugin for reading and writing simple key-value pairs
+  package_url: https://pub.dartlang.org/shared_preferences
+  version: 2.0.15
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Package Managers
+  image_url: https://img.stackshare.io/package/pub/image.png
+  detection_source_url: https://github.com/seanodera/musicplatform/blob/master/pubspec.lock
+  detection_source: pubspec.yaml
+  last_updated_by: Sean Odera
+  last_updated_on: 2022-06-05 05:43:09.000000000 Z
+- name: shimmer
+  description: A package provides an easy way to add shimmer effect in Flutter project
+  package_url: https://pub.dartlang.org/shimmer
+  version: 1.1.2
+  license: BSD-3-Clause
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Package Managers
+  image_url: https://img.stackshare.io/package/pub/image.png
+  detection_source_url: https://github.com/seanodera/musicplatform/blob/master/pubspec.lock
+  detection_source: pubspec.yaml
+  last_updated_by: Sean Odera
+  last_updated_on: 2022-06-05 05:43:09.000000000 Z
+- name: org.jetbrains.kotlin:kotlin-stdlib-jdk7
+  description: Kotlin Standard Library JDK 7 extension
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/seanodera/musicplatform/blob/master/android/app/build.gradle
+  detection_source: android/app/build.gradle
+  last_updated_by: Sean Odera
+  last_updated_on: 2022-05-22 20:24:32.000000000 Z
